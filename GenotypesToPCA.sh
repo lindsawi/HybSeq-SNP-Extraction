@@ -13,8 +13,9 @@ gatk SelectVariants -V "$prefix".snp.filtered.vcf -O "$prefix".snp.filtered.noca
 ## plink commands
 
 ## Need to edit VCF to not have a dot 
-plink --vcf-filter --vcf /scratch/lindsawi/Ppyriforme/reads/Physcomitrium-pyriforme.snp.filtered.nodot.vcf --allow-extra-chr --recode  --make-bed --geno --const-fid --out Ppyriforme
-plink --indep 50 5 2 --file Ppyriforme --allow-extra-chr --out Ppyriforme
-plink --extract Ppyriforme.prune.in --out Ppyriforme_pruned --file Ppyriforme --make-bed --allow-extra-chr --recode
-plink --pca 20 --file Ppyriforme_pruned --allow-extra-chr --out Ppyriforme
+bcftools annotate --set-id +"%CHROM:%POS" > "$prefix".snp.filtered.nocall.vcf > "$prefix".snp.filtered.nodot.vcf
+plink --vcf-filter --vcf "$prefix".snp.filtered.nodot.vcf --allow-extra-chr --recode  --make-bed --geno --const-fid --out Ppyriforme
+plink --indep 50 5 2 --file "$prefix" --allow-extra-chr --out "$prefix"
+plink --extract "$prefix".prune.in --out "$prefix"_pruned --file "$prefix" --make-bed --allow-extra-chr --recode
+plink --pca 20 --file "$prefix"_pruned --allow-extra-chr --out "$prefix"
 
