@@ -16,7 +16,7 @@ Note: "prefix.supercontigs.fasta" will be used as an input on command line along
 <br/>
 
 # <b> variantcall.sh </b>
-This script:
+This script will:
 1. Uses ```bwa mem``` to map paired-end reads to supercontigs
 2. Replaces read groups for mapped and unmapped bam files
 2. Removes duplicate reads 
@@ -42,8 +42,18 @@ Command line: ```bash GenotypesToPCA.sh prefix.supercontigs.fasta species```
 Potentially useful outputs: ```"$prefix".SNPall.vcf``` (contains all SNPs and indels), ```"$prefix".snp.filtered.vcf``` (only SNPs, removes indels), 
 ```"$prefix".snp.filtered.nocall.vcf``` (ONLY SNPs that pass a hard filter)
 
-
 <br/>
+
+# <b> plink_stats.sh </b> 
+This script will:
+1. Set ID name for each SNP (for filtering)
+2. Filter SNPs that didn't pass the filter or have missing data
+3. Generate eigenvalues and loadings for PCA axes (default set to 20)
+4. Generate basic statistics (heterozygosity, inbreeding coefficient, allele frequencies)
+
+Command line: ``` bash plink_stats.sh  "$prefix" ```
+
+<br/> 
 
 # <b> extract_phase_subgenomes.sh </b>
 let's talk about it together???
@@ -52,5 +62,5 @@ This script will:
 2. Run WhatsHap to generate phased VCF
 3. Extract two fasta sequences for each gene, corresponding to two alleles
 
-Command line: ``` bash extract_phase_subgenomes.sh "$prefix" ```
+Command line: ``` bash extract_phase_subgenomes.sh "$prefix" ``` <br/>
 Output: Phased sequences for alleles
