@@ -28,6 +28,7 @@ Command line: ```bash variantcall.sh prefix.supercontigs.fasta samplename```
 Output: Contains many intermediate BAM files and GVCF file
 
 <br/>
+
 # <b> GenotypesToPCA.sh </b> 
 This script will:
 1. Create samples.list from GVCF files
@@ -42,6 +43,7 @@ Useful output: ```"$prefix".SNPall.vcf``` (contains all SNPs and indels), ```"$p
 
 
 <br/>
+
 # <b> extract_phase_subgenomes.sh </b>
 let's talk about it together???
 
