@@ -37,7 +37,9 @@ This script will:
 ```"QD < 5.0 || FS > 60.0 || MQ < 40.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" ```
 4. Select SNP variants from hard filtering parameters
 
-Useful output: ```"$prefix".SNPall.vcf``` (contains all SNPs and indels), ```"$prefix".snp.filtered.vcf``` (only SNPs, removes indels), 
+Command line: ```bash GenotypesToPCA.sh prefix.supercontigs.fasta species```
+
+Potentially useful outputs: ```"$prefix".SNPall.vcf``` (contains all SNPs and indels), ```"$prefix".snp.filtered.vcf``` (only SNPs, removes indels), 
 ```"$prefix".snp.filtered.nocall.vcf``` (ONLY SNPs that pass a hard filter)
 
 
@@ -45,5 +47,10 @@ Useful output: ```"$prefix".SNPall.vcf``` (contains all SNPs and indels), ```"$p
 
 # <b> extract_phase_subgenomes.sh </b>
 let's talk about it together???
+This script will:
+1. Replace the FASTA headers
+2. Run WhatsHap to generate phased VCF
+3. Extract two fasta sequences for each gene, corresponding to two alleles
 
-Output: much wow very cool
+Command line: ``` bash extract_phase_subgenomes.sh "$prefix" ```
+Output: Phased sequences for alleles
