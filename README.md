@@ -4,9 +4,9 @@
 HybPiper (produces supercontigs): https://github.com/mossmatters/HybPiper <br/>
 GATK4: https://github.com/broadinstitute/gatk/releases 
 
-<br/>
+
 # Prerequisites
-From HybPiper, first run  the scripts ``` reads_first.py ``` followed by ```intronerate.py``` to produce supercontigs for each recovered gene. These supercontigs will be used as a 
+From HybPiper, first run  the scripts ```reads_first.py``` followed by ```intronerate.py``` to produce supercontigs for each recovered gene. These supercontigs will be used as a 
 "reference sequence" for the sample. If you have several different species, you will need to run the scripts for each individually.
 
 Concatenate all supercontigs into one single (reference) file: <br/>
@@ -31,8 +31,7 @@ Output: Contains many intermediate BAM files and GVCF file
 
 # <b> GenotypesToPCA.sh </b> 
 This script will:
-1. Create samples.list from GVCF files
-- Use samples.list as variant in step 2
+1. Create samples.list from GVCF files (Use samples.list as variant in step 2)
 2. Combine GVCF files into a cohort and genotype 
 3. Filter SNP's to remove indels using hard filter <br/>
 ```"QD < 5.0 || FS > 60.0 || MQ < 40.0 || MQRankSum < -12.5 || ReadPosRankSum < -8.0" ```
