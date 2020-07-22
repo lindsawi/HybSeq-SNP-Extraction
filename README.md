@@ -9,7 +9,7 @@ GATK4: https://github.com/broadinstitute/gatk/releases
 From HybPiper, first run  the scripts ``` reads_first.py ``` followed by ```intronerate.py``` to produce supercontigs for each recovered gene. These supercontigs will be used as a 
 "reference sequence" for the sample. If you have several different species, you will need to run the scripts for each individually.
 
-Concatenate all supercontigs into one single (reference) file: 
+Concatenate all supercontigs into one single (reference) file: <br/>
 ``` prefix/*/prefix/sequences/intron/*_supercontig.fasta > prefix.supercontigs.fasta ```
 
 Note: "prefix.supercontigs.fasta" will be used as an input on command line along with ```samplename```
@@ -22,7 +22,7 @@ This script:
 3. Identifies variant sites using gatk HaplotypeCaller <b>(NOTE: GVCF is produced) </b>
 4. Removes intermediate BAM files
 
-command line: bash variantcall.sh prefix.supercontigs.fasta samplename
+Command line: ```bash variantcall.sh prefix.supercontigs.fasta samplename```
 
 Output: Contains many intermediate BAM files and GVCF file
 
@@ -30,3 +30,4 @@ Output: Contains many intermediate BAM files and GVCF file
 
 # <b> plink_stats.sh </b>
 
+# <b> extract_phase_subgenomes.sh </b>
