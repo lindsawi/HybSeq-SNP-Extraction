@@ -56,7 +56,7 @@ Potentially useful outputs: ```"$prefix".SNPall.vcf``` (contains all SNPs and in
 <br/>
 
 # <b> plink_stats.sh </b> 
-##Additional dependencies: 
+## Additional dependencies: 
 bcftools: https://samtools.github.io/bcftools/ <br/>
 Plink: https://zzz.bwh.harvard.edu/plink/download.shtml <br/>
 
@@ -76,7 +76,7 @@ Command line: ``` bash plink_stats.sh  "$prefix" ```
 This workflow modified from Kates et al paper for allodiploid genomes <br/>
 Link to Kates et al paper: https://pubmed.ncbi.nlm.nih.gov/29729187/ 
 
-##Additional Dependencies
+## Additional Dependencies:
 Haplonerate: https://github.com/mossmatters/phyloscripts/tree/master/haplonerate <br/>
 WhatsHap: http://whatshap.readthedocs.io <br/>
 BioPython package: https://biopython.org/ <br/>
@@ -85,8 +85,8 @@ GNU Parallel: https://www.gnu.org/software/parallel/ <br/>
 
 This script will:
 1. Replace the FASTA headers
-2. Run WhatsHap to generate phased VCF
+2. Run WhatsHap to generate phased VCF using pipe characters
 3. Extract two fasta sequences for each gene, corresponding to two alleles
 
 Command line: ``` bash extract_phase_subgenomes.sh "$prefix" ``` <br/>
-Output: Phased sequences for alleles
+Output: One file containing two FASTA format subgenome sequences per inidividual per gene to be used in phylogenetic analysis
