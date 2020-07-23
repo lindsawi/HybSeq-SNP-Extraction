@@ -1,10 +1,11 @@
 #!/bin/bash
 ##End of Select Varitants for GATK4
 
+set -eo pipefail
 reference=$1 #Ppyriforme-3728.supercontigs.fasta
 prefix=$2 #Physcomitrium-pyriforme
 #Make Samples list
-*/*-g.vcf > samples.list
+ls */*-g.vcf > samples.list
 # Combine and Jointly call GVCFs
 gatk CombineGVCFs -R $reference --variant samples.list --output "$prefix".cohort.g.vcf
 gatk GenotypeGVCFs -R $reference -V "$prefix".cohort.g.vcf -O "$prefix".cohort.unfiltered.vcf
