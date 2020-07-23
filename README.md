@@ -2,18 +2,18 @@
 
 # Software
 HybPiper (produces supercontigs): https://github.com/mossmatters/HybPiper <br/>
-GATK4: https://github.com/broadinstitute/gatk/releases 
-Plink: https://zzz.bwh.harvard.edu/plink/download.shtml
-Samtools: https://github.com/samtools/samtools
-BWA: https://github.com/lh3/bwa
+GATK4: https://github.com/broadinstitute/gatk/releases <br/>
+Plink: https://zzz.bwh.harvard.edu/plink/download.shtml <br/>
+Samtools: https://github.com/samtools/samtools <br/>
+BWA: https://github.com/lh3/bwa <br/>
 
-# Additional Software For Additional Analyses
-Haplonerate: https://github.com/mossmatters/phyloscripts/tree/master/haplonerate 
-WhatsHap: http://whatshap.readthedocs.io 
-BioPython package: https://biopython.org/
-Python 3.0: https://www.python.org/download/releases/3.0/ 
-GNU Parallel: https://www.gnu.org/software/parallel/
-bcftools: https://samtools.github.io/bcftools/
+## Additional Software For Additional Analyses
+Haplonerate: https://github.com/mossmatters/phyloscripts/tree/master/haplonerate <br/>
+WhatsHap: http://whatshap.readthedocs.io <br/>
+BioPython package: https://biopython.org/ <br/>
+Python 3.0: https://www.python.org/download/releases/3.0/ <br/>
+GNU Parallel: https://www.gnu.org/software/parallel/ <br/>
+bcftools: https://samtools.github.io/bcftools/ <br/>
 
 
 # Prerequisites
@@ -56,9 +56,9 @@ Potentially useful outputs: ```"$prefix".SNPall.vcf``` (contains all SNPs and in
 <br/>
 
 # <b> plink_stats.sh </b> 
-# Additional dependencies: 
-bcftools: https://samtools.github.io/bcftools/
-Plink: https://zzz.bwh.harvard.edu/plink/download.shtml
+##Additional dependencies: 
+bcftools: https://samtools.github.io/bcftools/ <br/>
+Plink: https://zzz.bwh.harvard.edu/plink/download.shtml <br/>
 
 This script will:
 1. Set ID name for each SNP (for filtering)
@@ -73,15 +73,15 @@ Command line: ``` bash plink_stats.sh  "$prefix" ```
 # <b> extract_phase_subgenomes.sh </b>
 <b> NOTE: DO NOT RUN HAPLOTYPECALLE IN GVCF MODE </b>
 
-This workflow modified from Kates et al paper for allodiploid genomes
+This workflow modified from Kates et al paper for allodiploid genomes <br/>
 Link to Kates et al paper: https://pubmed.ncbi.nlm.nih.gov/29729187/ 
 
-# Additional Dependencies
-Haplonerate: https://github.com/mossmatters/phyloscripts/tree/master/haplonerate 
-WhatsHap: http://whatshap.readthedocs.io 
-BioPython package: https://biopython.org/
-Python 3.0: https://www.python.org/download/releases/3.0/ 
-GNU Parallel: https://www.gnu.org/software/parallel/
+##Additional Dependencies
+Haplonerate: https://github.com/mossmatters/phyloscripts/tree/master/haplonerate <br/>
+WhatsHap: http://whatshap.readthedocs.io <br/>
+BioPython package: https://biopython.org/ <br/>
+Python 3.0: https://www.python.org/download/releases/3.0/ <br/>
+GNU Parallel: https://www.gnu.org/software/parallel/ <br/>
 
 This script will:
 1. Replace the FASTA headers
