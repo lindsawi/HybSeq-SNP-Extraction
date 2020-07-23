@@ -13,9 +13,12 @@ read1fn="$prefix"_1P.fastq
 read2fn="$prefix"_2P.fastq
 
 cd $prefix
-##gatk CreateSequenceDictionary -R $reference 
-##bwa index $reference
-##samtools faidx $reference
+if [ ! -f ../*.dict ]
+then gatk CreateSequenceDictionary -R $reference
+fi 
+
+bwa index $reference
+samtools faidx $reference
 
 #Align read files to reference sequence and map
 bwa mem $reference $read1fn $read2fn | samtools view -bS - | samtools sort - -o "$prefix.sorted.bam"
