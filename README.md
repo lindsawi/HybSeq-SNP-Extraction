@@ -7,7 +7,7 @@ Plink: https://zzz.bwh.harvard.edu/plink/download.shtml <br/>
 Samtools: https://github.com/samtools/samtools <br/>
 BWA: https://github.com/lh3/bwa <br/>
 
-## Additional Software For Additional Analyses
+## Additional Software For Analyses
 Haplonerate: https://github.com/mossmatters/phyloscripts/tree/master/haplonerate <br/>
 WhatsHap: http://whatshap.readthedocs.io <br/>
 BioPython package: https://biopython.org/ <br/>
@@ -25,6 +25,11 @@ Concatenate all supercontigs into one single (reference) file: <br/>
 
 Note: "prefix.supercontigs.fasta" will be used as an input on command line along with ```samplename```
 <br/>
+
+# Workflow
+![HybSeq-SNP-Extraction Logo](https://flic.kr/p/2jp9jsv)
+
+
 
 # <b> variantcall.sh </b>
 This script will:
@@ -71,9 +76,9 @@ Command line: ``` bash plink_stats.sh  "$prefix" ```
 <br/> 
 
 # <b> extract_phase_subgenomes.sh </b>
-<b> NOTE: DO NOT RUN HAPLOTYPECALLE IN GVCF MODE </b>
+<b> NOTE: DO NOT RUN HAPLOTYPECALLER IN GVCF MODE </b>
 
-This workflow modified from Kates et al paper for allodiploid genomes <br/>
+This workflow has been modified from Kates et al paper for allodiploid genomes <br/>
 Link to Kates et al paper: https://pubmed.ncbi.nlm.nih.gov/29729187/ 
 
 ## Additional Dependencies:
@@ -86,7 +91,7 @@ GNU Parallel: https://www.gnu.org/software/parallel/ <br/>
 This script will:
 1. Replace the FASTA headers
 2. Run WhatsHap to generate phased VCF using pipe characters
-3. Extract two fasta sequences for each gene, corresponding to two alleles
+3. Extract two FASTA sequences for each gene, corresponding to two alleles
 
 Command line: ``` bash extract_phase_subgenomes.sh "$prefix" ``` <br/>
-Output: One file containing two FASTA format subgenome sequences per inidividual per gene to be used in phylogenetic analysis
+Output: One file containing two FASTA format subgenome sequences per individual per gene to be used in phylogenetic analysis
