@@ -3,6 +3,17 @@
 # Software
 HybPiper (produces supercontigs): https://github.com/mossmatters/HybPiper <br/>
 GATK4: https://github.com/broadinstitute/gatk/releases 
+Plink: https://zzz.bwh.harvard.edu/plink/download.shtml
+Samtools: https://github.com/samtools/samtools
+BWA: https://github.com/lh3/bwa
+
+# Additional Software For Additional Analyses
+Haplonerate: https://github.com/mossmatters/phyloscripts/tree/master/haplonerate 
+WhatsHap: http://whatshap.readthedocs.io 
+BioPython package: https://biopython.org/
+Python 3.0: https://www.python.org/download/releases/3.0/ 
+GNU Parallel: https://www.gnu.org/software/parallel/
+bcftools: https://samtools.github.io/bcftools/
 
 
 # Prerequisites
@@ -45,6 +56,10 @@ Potentially useful outputs: ```"$prefix".SNPall.vcf``` (contains all SNPs and in
 <br/>
 
 # <b> plink_stats.sh </b> 
+# Additional dependencies: 
+bcftools: https://samtools.github.io/bcftools/
+Plink: https://zzz.bwh.harvard.edu/plink/download.shtml
+
 This script will:
 1. Set ID name for each SNP (for filtering)
 2. Filter SNPs that didn't pass the filter or have missing data
@@ -56,7 +71,18 @@ Command line: ``` bash plink_stats.sh  "$prefix" ```
 <br/> 
 
 # <b> extract_phase_subgenomes.sh </b>
-let's talk about it together???
+<b> NOTE: DO NOT RUN HAPLOTYPECALLE IN GVCF MODE </b>
+
+This workflow modified from Kates et al paper for allodiploid genomes
+Link to Kates et al paper: https://pubmed.ncbi.nlm.nih.gov/29729187/ 
+
+# Additional Dependencies
+Haplonerate: https://github.com/mossmatters/phyloscripts/tree/master/haplonerate 
+WhatsHap: http://whatshap.readthedocs.io 
+BioPython package: https://biopython.org/
+Python 3.0: https://www.python.org/download/releases/3.0/ 
+GNU Parallel: https://www.gnu.org/software/parallel/
+
 This script will:
 1. Replace the FASTA headers
 2. Run WhatsHap to generate phased VCF
