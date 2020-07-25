@@ -27,8 +27,7 @@ Note: "prefix.supercontigs.fasta" will be used as an input on command line along
 <br/>
 
 # Workflow
-
-<a data-flickr-embed="true" href="https://www.flickr.com/photos/189441425@N04/50145016761/in/dateposted-public/" title="dataworkflow"><img src="https://live.staticflickr.com/65535/50145016761_931f464b89_c.jpg" width="800" height="450" alt="dataworkflow"></a>
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/189441425@N04/50151219753/in/dateposted-public/" title="DataWorkflow (1)-1"><img src="https://live.staticflickr.com/65535/50151219753_de07f9702e_c.jpg" width="800" height="450" alt="DataWorkflow (1)-1"></a>
 
 # <b> variantcall.sh </b>
 This script will:
