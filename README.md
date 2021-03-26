@@ -71,6 +71,7 @@ This script will:
 
 Command line: ``` bash plink_stats.sh  "$prefix" ```
 
+Outputs: Statistic files ```"$prefix"_pruned.bed, "$prefix"_pruned.bim, "$prefix"_pruned.fam, "$prefix"_pruned.frq, "$prefix"_pruned.het, "$prefix"_pruned.ibc, "$prefix"_pruned.map, "$prefix"_pruned.nosex, "$prefix"_pruned.ped, "$prefix"_pruned.log```
 <br/> 
 
 # <b> extract_phase_subgenomes.sh </b>
