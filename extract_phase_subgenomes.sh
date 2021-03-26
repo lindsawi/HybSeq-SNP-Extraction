@@ -26,11 +26,11 @@ tabix $prefix.phased.vcf.gz
 #Extract two fasta sequences for each gene, corresponding to the phase
 mkdir -p phased_bcftools
 rm phased_bcftools/*
-parallel "samtools faidx $prefix.supercontigs.fasta $prefix-{1} | bcftools consensus -H 1 $prefix.phased.vcf.gz > phased_bcftools/$prefix-{1}.phased.1.fasta" :::: /scratch/joh97948/physco/raxml_genelist.txt
-parallel "samtools faidx $prefix.supercontigs.fasta $prefix-{1} | bcftools consensus -H 2 $prefix.phased.vcf.gz > phased_bcftools/$prefix-{1}.phased.2.fasta" :::: /scratch/joh97948/physco/raxml_genelist.txt
+parallel "samtools faidx $prefix.supercontigs.fasta $prefix-{1} | bcftools consensus -H 1 $prefix.phased.vcf.gz > phased_bcftools/$prefix-{1}.phased.1.fasta" :::: raxml_genelist.txt
+parallel "samtools faidx $prefix.supercontigs.fasta $prefix-{1} | bcftools consensus -H 2 $prefix.phased.vcf.gz > phased_bcftools/$prefix-{1}.phased.2.fasta" :::: raxml_genelist.txt
 
 #For polyploidy analysis, need to delete sequences outside the largest phase block using Haplonerate 
 mkdir -p phased_seqs
-parallel "python /home/joh97948/phyloscripts/haplonerate/haplonerate.py $prefix.whatshap.gtf phased_bcftools/$prefix-{}.phased.1.fasta phased_bcftools/$prefix-{}.phased.2.fasta --edit delete --ref $prefix.supercontigs.fasta > phased_seqs/{}.fasta" :::: /scratch/joh97948/physco/raxml_genelist.txt
+parallel "python /home/phyloscripts/haplonerate/haplonerate.py $prefix.whatshap.gtf phased_bcftools/$prefix-{}.phased.1.fasta phased_bcftools/$prefix-{}.phased.2.fasta --edit delete --ref $prefix.supercontigs.fasta > phased_seqs/{}.fasta" :::: raxml_genelist.txt
 
 
