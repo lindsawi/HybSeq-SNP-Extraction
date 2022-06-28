@@ -3,7 +3,7 @@
 # Software
 HybPiper (produces supercontigs): https://github.com/mossmatters/HybPiper <br/>
 GATK4: https://github.com/broadinstitute/gatk/releases <br/>
-Plink: https://zzz.bwh.harvard.edu/plink/download.shtml <br/>
+Plink: https://www.cog-genomics.org/plink/1.9/ <br/>
 Samtools: https://github.com/samtools/samtools <br/>
 BWA: https://github.com/lh3/bwa <br/>
 
